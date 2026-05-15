@@ -1,0 +1,550 @@
+.flash-deals-section {
+    padding-top: var(--sp-s);
+    padding-bottom: var(--sp-m);
+}
+
+.flash-deals-shell {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius);
+    padding: 22px;
+    background-color: var(--primary);
+    box-shadow: 0 28px 64px rgba(33, 12, 68, .2);
+    color: #fff;
+}
+
+.flash-deals-head {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 18px;
+}
+
+.flash-deals-copy {
+    max-width: 620px;
+}
+
+.flash-deals-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 14px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, var(--red) 0%, var(--orange) 115%);
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: .3px;
+    text-transform: uppercase;
+    box-shadow: 0 10px 24px rgba(232, 75, 98, .3);
+    animation: flashKickerPulse 1.8s ease-in-out infinite;
+}
+
+.flash-deals-title {
+    margin: 14px 0 0;
+    font-size: clamp(24px, 2.4vw, 34px);
+    line-height: 1.12;
+    font-weight: 900;
+}
+
+.flash-deals-sub {
+    margin: 12px 0 0;
+    max-width: 52ch;
+    color: rgba(255, 255, 255, .8);
+    font-size: 14px;
+    line-height: 1.75;
+}
+
+.flash-deals-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 0 0 auto;
+}
+
+.flash-countdown {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    min-height: 54px;
+    padding: 10px 16px;
+    border-radius: 18px;
+    background: rgba(13, 7, 24, .28);
+    border: 1px solid rgba(255, 255, 255, .12);
+    backdrop-filter: blur(12px);
+}
+
+.flash-countdown-label {
+    color: rgba(255, 255, 255, .74);
+    font-size: 12px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.flash-countdown-values {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    direction: ltr;
+    unicode-bidi: isolate;
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 1;
+    color: #fff;
+}
+
+.flash-countdown-values b {
+    color: rgba(255, 255, 255, .46);
+    font-weight: 700;
+}
+
+.flash-deals-controls {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.flash-deals-arrow {
+    width: 42px;
+    height: 42px;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .12);
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 160ms ease, transform 160ms ease;
+}
+
+.flash-deals-arrow:hover {
+    background: rgba(255, 255, 255, .2);
+}
+
+.flash-deals-arrow:active {
+    transform: scale(.96);
+}
+
+.flash-deals-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 7fr) minmax(280px, 3fr);
+    gap: 18px;
+    align-items: stretch;
+    touch-action: pan-y;
+}
+
+.flash-featured-card,
+.flash-preview-card {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.flash-featured-card {
+    min-height: 360px;
+    border-radius: var(--radius);
+}
+
+.flash-featured-card::after,
+.flash-preview-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(180deg, rgba(8, 5, 14, .12) 0%, rgba(8, 5, 14, .22) 26%, rgba(8, 5, 14, .62) 74%, rgba(8, 5, 14, .84) 100%);
+    z-index: 1;
+}
+
+.flash-featured-card.is-transitioning {
+    pointer-events: none;
+}
+
+.flash-featured-card.is-slide-next,
+.flash-preview-card.is-slide-next {
+    --flash-shift: -28px;
+}
+
+.flash-featured-card.is-slide-prev,
+.flash-preview-card.is-slide-prev {
+    --flash-shift: 28px;
+}
+
+.flash-featured-image,
+.flash-preview-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.flash-featured-image {
+    transform: scale(1.01);
+}
+
+.flash-featured-card.is-transition-out .flash-featured-image,
+.flash-featured-card.is-transition-out .flash-featured-overlay,
+.flash-preview-card.is-transition-out .flash-preview-image,
+.flash-preview-card.is-transition-out .flash-preview-overlay {
+    opacity: 0;
+    transform: translateX(var(--flash-shift, -24px));
+    transition: transform 200ms ease, opacity 200ms ease;
+}
+
+.flash-featured-card.is-transition-in .flash-featured-image,
+.flash-featured-card.is-transition-in .flash-featured-overlay,
+.flash-preview-card.is-transition-in .flash-preview-image,
+.flash-preview-card.is-transition-in .flash-preview-overlay {
+    animation: flashCardIn 260ms cubic-bezier(.2, .9, .2, 1);
+}
+
+.flash-featured-overlay {
+    position: relative;
+    z-index: 2;
+    min-height: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.flash-featured-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.flash-featured-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.flash-featured-status {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+.flash-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 34px;
+    padding: 8px 12px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.flash-badge-discount {
+    color: #ffffff;
+    background-color: var(--orange);
+}
+
+.flash-badge-urgent {
+    background: var(--red);
+    color: #ffffff;
+}
+
+.flash-availability {
+    display: inline-flex;
+    align-items: center;
+    min-height: 34px;
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: var(--red);
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 800;
+    box-shadow: 0 0 0 0 rgba(232, 75, 98, .36);
+    animation: flashPulse 1.9s ease-in-out infinite;
+}
+
+.flash-featured-bottom {
+    display: grid;
+    gap: 14px;
+}
+
+.flash-featured-place {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255, 255, 255, .82);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.flash-featured-name {
+    margin: 12px 0 0;
+    font-size: clamp(22px, 2.6vw, 30px);
+    line-height: 1.12;
+    font-weight: 900;
+}
+
+.flash-featured-copy {
+    margin: 12px 0 0;
+    max-width: 40ch;
+    color: rgba(255, 255, 255, .8);
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.flash-featured-foot {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 18px;
+}
+
+.flash-price-block {
+    display: grid;
+    gap: 4px;
+}
+
+.flash-price-old {
+    color: rgba(255, 255, 255, .56);
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: line-through;
+    text-decoration-color: var(--red);
+    text-decoration-thickness: 2px;
+}
+
+.flash-price-new {
+    font-size: 28px;
+    line-height: 1;
+    font-weight: 900;
+    color: #fff;
+}
+
+.flash-price-note {
+    color: rgba(255, 255, 255, .72);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.flash-featured-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 140px;
+    min-height: 48px;
+    padding: 11px 20px;
+    border-radius: 16px;
+    background: var(--red);
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 800;
+    box-shadow: 0 18px 34px rgba(232, 75, 98, .28);
+}
+
+.flash-preview-card {
+    min-height: 360px;
+    border-radius: var(--radius);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .08);
+    pointer-events: none;
+}
+
+.flash-preview-overlay {
+    position: relative;
+    z-index: 2;
+    min-height: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 18px;
+    color: #fff;
+}
+
+.flash-preview-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    min-height: 34px;
+    padding: 8px 12px;
+    border-radius: 999px;
+    color: #ffffff;
+    background-color: var(--orange);
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.flash-preview-body {
+    display: grid;
+    gap: 10px;
+}
+
+.flash-preview-label {
+    color: rgba(255, 255, 255, .72);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.flash-preview-title {
+    margin: 0;
+    font-size: 24px;
+    line-height: 1.14;
+    font-weight: 900;
+}
+
+.flash-preview-location {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: rgba(255, 255, 255, .78);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.flash-preview-price {
+    font-size: 24px;
+    line-height: 1;
+    font-weight: 900;
+    color: #fff;
+}
+
+.flash-deals-data {
+    display: none;
+}
+
+@keyframes flashPulse {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(232, 75, 98, .28);
+    }
+
+    50% {
+        box-shadow: 0 0 0 10px rgba(232, 75, 98, 0);
+    }
+}
+
+@keyframes flashCardIn {
+    from {
+        opacity: 0;
+        transform: translateX(calc(var(--flash-shift, -24px) * -1));
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes flashKickerPulse {
+    0%,
+    100% {
+        box-shadow: 0 10px 24px rgba(232, 75, 98, .3);
+        transform: translateY(0);
+    }
+
+    50% {
+        box-shadow: 0 14px 28px rgba(232, 75, 98, .42);
+        transform: translateY(-1px);
+    }
+}
+
+@media (max-width: 1199.98px) {
+    .flash-deals-layout {
+        grid-template-columns: minmax(0, 1fr) minmax(240px, .55fr);
+    }
+
+    .flash-featured-card,
+    .flash-featured-overlay,
+    .flash-preview-card,
+    .flash-preview-overlay {
+        min-height: 320px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .flash-deals-section {
+        padding-top: var(--sp-s);
+        padding-bottom: var(--sp-m);
+    }
+
+    .flash-deals-shell {
+        border-radius: var(--radius);
+        padding: 18px;
+    }
+
+    .flash-deals-head {
+        flex-direction: column;
+        align-items: stretch;
+        margin-bottom: 18px;
+    }
+
+    .flash-deals-meta {
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .flash-countdown {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .flash-deals-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .flash-preview-card {
+        display: none;
+    }
+
+    .flash-featured-card,
+    .flash-featured-overlay {
+        min-height: 300px;
+    }
+
+    .flash-featured-overlay {
+        padding: 16px;
+    }
+
+    .flash-featured-top,
+    .flash-featured-foot {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .flash-featured-name {
+        font-size: 24px;
+    }
+
+    .flash-featured-cta {
+        width: 100%;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .flash-deals-shell {
+        padding: 16px;
+    }
+
+    .flash-deals-title {
+        font-size: 26px;
+    }
+
+    .flash-deals-sub {
+        font-size: 13px;
+    }
+
+    .flash-countdown {
+        padding: 10px 12px;
+    }
+
+    .flash-countdown-values {
+        font-size: 20px;
+    }
+
+    .flash-deals-controls {
+        width: 100%;
+        justify-content: flex-end;
+    }
+}

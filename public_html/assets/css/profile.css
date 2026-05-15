@@ -1,0 +1,784 @@
+.profile-page .top-strip {
+    margin-top: 18px;
+}
+
+.profile-cover-wrap {
+    position: relative;
+    min-height: 250px;
+    padding-bottom: 92px;
+    background:
+        linear-gradient(180deg, rgba(17, 8, 34, .38) 0%, rgba(17, 8, 34, .24) 100%),
+        url("../imgs/hero.png");
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.profile-cover-wrap::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(560px 220px at 18% 18%, rgba(232, 75, 98, .16), transparent 62%),
+        radial-gradient(780px 280px at 80% 0%, rgba(255, 255, 255, .12), transparent 58%);
+    pointer-events: none;
+}
+
+.profile-cover-shell {
+    position: relative;
+    z-index: 2;
+}
+
+.profile-summary {
+    position: relative;
+    z-index: 3;
+    margin-top: -72px;
+}
+
+.profile-summary-card {
+    background: rgba(255, 255, 255, .96);
+    border: 1px solid rgba(76, 0, 135, .08);
+    border-radius: var(--radius);
+    box-shadow: 0 24px 60px rgba(29, 14, 61, .12);
+    padding: 24px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+.profile-identity {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    min-width: 0;
+}
+
+.profile-avatar-wrap {
+    position: relative;
+    flex: 0 0 auto;
+}
+
+.profile-avatar-wrap::before {
+    content: "";
+    position: absolute;
+    inset: -8px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(240, 122, 43, .82), rgba(76, 0, 135, .2));
+    filter: blur(2px);
+}
+
+.profile-avatar {
+    position: relative;
+    z-index: 1;
+    width: 118px;
+    height: 118px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid rgba(255, 255, 255, .88);
+    box-shadow: 0 18px 34px rgba(17, 8, 29, .18);
+    background: rgba(255, 255, 255, .14);
+}
+
+.profile-avatar img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-copy {
+    min-width: 0;
+}
+
+.profile-kicker {
+    display: inline-flex;
+    align-items: center;
+    min-height: 32px;
+    padding-inline: 12px;
+    border-radius: 999px;
+    background: rgba(240, 122, 43, .12);
+    color: var(--orange);
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.profile-name {
+    margin-top: 10px;
+    color: var(--primary-dark);
+    font-size: clamp(20px, 2.2vw, 28px);
+    font-weight: 800;
+    line-height: 1.12;
+}
+
+.profile-subtitle {
+    margin-top: 8px;
+    color: #000000;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.profile-stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+.profile-stat {
+    min-width: 128px;
+    padding: 14px 16px;
+    border-radius: 22px;
+    background: linear-gradient(180deg, #fbf9ff 0%, #f3eefc 100%);
+    border: 1px solid rgba(76, 0, 135, .08);
+    text-align: center;
+}
+
+.profile-stat strong {
+    display: block;
+    color: var(--primary);
+    font-size: 22px;
+    font-weight: 900;
+    line-height: 1.1;
+}
+
+.profile-stat span {
+    display: block;
+    margin-top: 6px;
+    color: #7b6f92;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.profile-main {
+    padding: 28px 0 var(--sp-section);
+}
+
+.profile-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.3fr) minmax(280px, .7fr);
+    gap: 24px;
+    min-width: 0;
+}
+
+.profile-main-stack {
+    display: grid;
+    gap: 24px;
+    min-width: 0;
+}
+
+.profile-panel {
+    background: #fff;
+    border: 1px solid rgba(76, 0, 135, .08);
+    border-radius: var(--radius);
+    box-shadow: 0 18px 38px rgba(32, 12, 58, .08);
+    padding: 24px;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.profile-panel-title {
+    margin: 0 0 16px;
+    color: var(--primary-dark);
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.profile-action-list {
+    display: grid;
+    gap: 14px;
+}
+
+.profile-info-list {
+    display: grid;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.profile-info-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 12px 14px;
+    border-radius: 16px;
+    background: linear-gradient(180deg, #fbf9ff 0%, #f4effd 100%);
+    border: 1px solid rgba(76, 0, 135, .07);
+}
+
+.profile-info-copy {
+    min-width: 0;
+    flex: 1 1 auto;
+}
+
+.profile-info-label {
+    display: block;
+    color: #7b6f92;
+    font-size: 11px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.profile-info-value {
+    display: block;
+    color: var(--primary-dark);
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 1.35;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.profile-edit-btn {
+    flex: 0 0 auto;
+    min-width: 62px;
+    min-height: 32px;
+    border: 0;
+    border-radius: 999px;
+    background: var(--red);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 800;
+    padding-inline: 12px;
+    box-shadow: 0 12px 24px rgba(232, 75, 98, .18);
+}
+
+.profile-edit-btn:hover {
+    filter: brightness(1.04);
+}
+
+.profile-balance-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.profile-balance-card {
+    padding: 16px 14px;
+    border-radius: var(--radius);
+    background: linear-gradient(180deg, #fbf9ff 0%, #f4effd 100%);
+    border: 1px solid rgba(76, 0, 135, .07);
+    text-align: center;
+}
+
+.profile-balance-card strong {
+    display: block;
+    color: var(--primary);
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 1.1;
+}
+
+.profile-balance-card span {
+    display: block;
+    margin-top: 6px;
+    color: #7b6f92;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.profile-balance-note {
+    margin-top: 14px;
+    color: #7b6f92;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.profile-favorites-rail {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    padding-bottom: 6px;
+    margin-top: 14px;
+    scrollbar-width: none;
+    scroll-snap-type: x proximity;
+    max-width: 100%;
+}
+
+.profile-favorites-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.profile-favorites-controls {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    flex: 0 0 auto;
+}
+
+.profile-favorites-arrow {
+    width: 34px;
+    height: 34px;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(76, 0, 135, .08);
+    color: var(--primary);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+.profile-favorites-arrow:hover {
+    background: var(--primary);
+    color: #fff;
+}
+
+.profile-favorites-arrow:active {
+    transform: scale(.96);
+}
+
+.profile-favorites-rail::-webkit-scrollbar {
+    display: none;
+}
+
+.profile-favorites-card {
+    flex: 0 0 280px;
+    scroll-snap-align: start;
+    margin-inline: 2px;
+}
+
+/* Match index villas card hover behavior inside profile favorites */
+.profile-favorites-card .listing-media img {
+    transition: transform 320ms ease;
+}
+
+.profile-favorites-card .listing-cardx:hover .listing-media::after,
+.profile-favorites-card .listing-cardx:focus-within .listing-media::after {
+    opacity: 1;
+}
+
+.profile-favorites-card .listing-cardx:hover .listing-overlay,
+.profile-favorites-card .listing-cardx:focus-within .listing-overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.profile-favorites-card .listing-cardx:hover .listing-media img {
+    transform: scale(1.04);
+}
+
+.profile-action-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 16px 18px;
+    border-radius: 20px;
+    background: linear-gradient(180deg, #fbf9ff 0%, #f4effd 100%);
+    border: 1px solid rgba(76, 0, 135, .07);
+    text-decoration: none;
+}
+
+.profile-action-main {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+}
+
+.profile-action-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 16px;
+    background: rgba(76, 0, 135, .08);
+    color: var(--primary);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.profile-action-copy strong {
+    display: block;
+    color: var(--primary-dark);
+    font-size: 15px;
+    margin-bottom: 4px;
+}
+
+.profile-action-copy span {
+    display: block;
+    color: #7b6f92;
+    font-size: 12px;
+}
+
+.profile-action-arrow {
+    color: #9b8db1;
+    font-size: 18px;
+}
+
+.profile-side-card {
+    padding: 20px;
+    border-radius: var(--radius);
+    background: var(--primary);
+    color: #fff;
+}
+
+.profile-side-card h3 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.profile-side-card p {
+    margin: 10px 0 0;
+    color: rgba(255, 255, 255, .78);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.profile-side-list {
+    display: grid;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.profile-side-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 14px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, .08);
+    border: 1px solid rgba(255, 255, 255, .1);
+}
+
+.profile-side-item span {
+    color: rgba(255, 255, 255, .74);
+    font-size: 12px;
+}
+
+.profile-side-item strong {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.profile-side-stack {
+    display: grid;
+    gap: 24px;
+    min-width: 0;
+}
+
+.profile-booking-card {
+    padding: 20px;
+    border-radius: var(--radius);
+    background: #fff;
+    border: 1px solid rgba(76, 0, 135, .08);
+    box-shadow: 0 18px 38px rgba(32, 12, 58, .08);
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.profile-booking-card h3 {
+    margin: 0;
+    color: var(--primary-dark);
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.profile-booking-item {
+    margin-top: 18px;
+    padding: 16px;
+    border-radius: 20px;
+    background: linear-gradient(180deg, #fbf9ff 0%, #f4effd 100%);
+    border: 1px solid rgba(76, 0, 135, .07);
+}
+
+.profile-booking-title {
+    color: var(--primary-dark);
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.profile-booking-location {
+    margin-top: 6px;
+    color: #7b6f92;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.profile-booking-location i {
+    color: var(--red);
+    margin-left: 6px;
+}
+
+.profile-booking-dates {
+    display: grid;
+    gap: 10px;
+    margin-top: 14px;
+}
+
+.profile-booking-date-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    color: #66597e;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.profile-booking-date-row strong {
+    color: var(--primary-dark);
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.profile-booking-status {
+    margin-top: 14px;
+    display: inline-flex;
+    align-items: center;
+    min-height: 32px;
+    padding-inline: 12px;
+    border-radius: 999px;
+    background: rgba(46, 179, 124, .12);
+    color: #2e9f72;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.profile-booking-extend {
+    margin-top: 16px;
+    width: 100%;
+    min-height: 42px;
+    border: 0;
+    border-radius: 16px;
+    background: var(--red);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 800;
+    box-shadow: 0 14px 24px rgba(232, 75, 98, .18);
+}
+
+.profile-booking-extend:hover {
+    filter: brightness(1.04);
+}
+
+.profile-booking-item.is-past {
+    background: linear-gradient(180deg, #fcfcfe 0%, #f6f6fa 100%);
+}
+
+.profile-booking-status.is-past {
+    background: rgba(76, 0, 135, .08);
+    color: var(--primary);
+}
+
+@media (max-width: 991.98px) {
+    .profile-summary-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .profile-stats {
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    .profile-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-grid > * {
+        min-width: 0;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .profile-cover-wrap {
+        min-height: 210px;
+        padding-bottom: 76px;
+    }
+
+    .profile-summary-card {
+        padding: 18px 16px;
+        border-radius: var(--radius);
+        align-items: center;
+        text-align: center;
+        gap: 16px;
+    }
+
+    .profile-identity {
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        gap: 14px;
+    }
+
+    .profile-copy {
+        text-align: center;
+    }
+
+    .profile-kicker {
+        margin-inline: auto;
+    }
+
+    .profile-stats {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .profile-stat {
+        min-width: 108px;
+        flex: 1 1 calc(50% - 12px);
+        padding: 12px 10px;
+        border-radius: 18px;
+    }
+
+    .profile-stat strong {
+        font-size: 20px;
+    }
+
+    .profile-stat span {
+        font-size: 11px;
+    }
+
+    .profile-panel {
+        padding: 18px;
+        border-radius: var(--radius);
+    }
+
+    .profile-panel-title,
+    .profile-side-card h3,
+    .profile-booking-card h3 {
+        font-size: 19px;
+    }
+
+    .profile-main-stack {
+        gap: 18px;
+    }
+
+    .profile-side-stack {
+        gap: 18px;
+    }
+
+    .profile-balance-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-favorites-card {
+        flex-basis: 240px;
+    }
+
+    .profile-favorites-arrow {
+        width: 30px;
+        height: 30px;
+    }
+
+    .profile-side-card,
+    .profile-booking-card {
+        padding: 18px;
+        border-radius: var(--radius);
+    }
+
+    .profile-booking-item {
+        padding: 14px;
+        border-radius: 18px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .profile-cover-wrap {
+        min-height: 188px;
+        padding-bottom: 70px;
+    }
+
+    .profile-avatar {
+        width: 88px;
+        height: 88px;
+    }
+
+    .profile-name {
+        font-size: 22px;
+    }
+
+    .profile-subtitle {
+        font-size: 12px;
+        line-height: 1.7;
+    }
+
+    .profile-stats {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .profile-stat {
+        min-width: 0;
+        width: 100%;
+    }
+
+    .profile-action-item {
+        padding: 14px;
+    }
+
+    .profile-info-item {
+        padding: 14px;
+        align-items: stretch;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .profile-edit-btn {
+        align-self: flex-start;
+    }
+
+    .profile-info-value {
+        font-size: 13px;
+        white-space: normal;
+        word-break: break-word;
+    }
+
+    .profile-balance-note,
+    .profile-side-card p {
+        font-size: 12px;
+    }
+
+    .profile-booking-date-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+
+    .profile-booking-status {
+        font-size: 11px;
+    }
+
+    .profile-favorites-rail {
+        gap: 10px;
+        padding-inline: 0 6px;
+    }
+
+    .profile-favorites-card {
+        flex-basis: 220px;
+    }
+
+    .profile-favorites-head {
+        align-items: center;
+    }
+
+    .profile-favorites-controls {
+        gap: 6px;
+    }
+
+    .profile-favorites-arrow {
+        width: 28px;
+        height: 28px;
+    }
+
+}

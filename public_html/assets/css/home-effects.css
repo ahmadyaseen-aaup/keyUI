@@ -1,0 +1,79 @@
+            /* =========================
+       Scroll reveal (cards)
+       ========================= */
+
+            /* initial hidden state */
+            .reveal-card {
+                opacity: 0;
+                transform: translateY(14px) scale(.985);
+                filter: blur(2px);
+                transition:
+                    opacity 520ms ease,
+                    transform 520ms cubic-bezier(.2, .9, .2, 1),
+                    filter 520ms ease;
+                will-change: opacity, transform, filter;
+            }
+
+            /* shown */
+            .reveal-card.is-visible {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+                filter: blur(0);
+            }
+
+            /* reduce motion accessibility */
+            @media (prefers-reduced-motion: reduce) {
+                .reveal-card {
+                    transition: none !important;
+                    transform: none !important;
+                    filter: none !important;
+                    opacity: 1 !important;
+                }
+            }
+
+
+
+
+            /* ===== ADS STRIP: subtle pattern overlay ===== */
+            .ads-strip {
+                position: relative;
+                overflow: hidden;
+            }
+
+            /* soft pattern layer */
+            .ads-strip::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                pointer-events: none;
+                z-index: 0;
+
+                /* 3-layer pattern: dots + diagonal lines + radial glow */
+                background:
+                    radial-gradient(circle at 20% 30%, rgba(255, 255, 255, .08), transparent 55%),
+                    radial-gradient(circle at 80% 70%, rgba(255, 255, 255, .06), transparent 60%),
+
+                    repeating-linear-gradient(135deg,
+                    rgba(255, 255, 255, .06) 0px,
+                    rgba(255, 255, 255, .06) 1px,
+                    transparent 1px,
+                    transparent 14px),
+
+                    radial-gradient(rgba(255, 255, 255, .10) 1px,
+                    transparent 1px);
+
+                background-size:
+                    auto,
+                    auto,
+                    auto,
+                    22px 22px;
+
+                opacity: 0;
+                mix-blend-mode: overlay;
+            }
+
+            /* keep content above pattern */
+            .ads-strip .container {
+                position: relative;
+                z-index: 1;
+            }

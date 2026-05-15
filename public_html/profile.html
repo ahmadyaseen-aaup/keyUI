@@ -1,0 +1,708 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>KeyGo - حسابي</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700;800;900&display=swap"
+              rel="stylesheet" />
+        <link id="bootstrapCss"
+              data-rtl-href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css"
+              data-ltr-href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+              href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css"
+              rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+        <link href="assets/css/base.css?v=14" rel="stylesheet" />
+        <link href="assets/css/home.css?v=14" rel="stylesheet" />
+        <link href="assets/css/profile.css?v=14" rel="stylesheet" />
+    </head>
+
+    <body class="profile-page">
+
+        <header class="profile-cover-wrap">
+            <div class="container position-relative profile-cover-shell">
+                <div class="nav-sticky">
+                    <div class="top-strip d-flex align-items-center justify-content-between">
+                        <div class="d-flex align-items-center" style="gap: var(--sp-s);">
+                            <div class="lang-switch" aria-label="language switcher">
+                                <a class="is-active" href="#" lang="ar">AR</a>
+                                <a href="#" lang="en">EN</a>
+                                <a href="#" lang="he">HE</a>
+                            </div>
+                        </div>
+
+                        <div class="msg flex-grow-1 text-center d-none d-md-block">
+                            <span class="text-orange">التطبيق الأول</span>
+                            لحجز الفلل والشاليهات في فلسطين
+                        </div>
+
+                        <div class="top-strip-actions d-flex align-items-center">
+                            <a href="#" aria-label="favorites">1<i class="ms-1 bi bi-heart"></i></a>
+
+                            <a href="#" aria-label="notifications" class="position-relative">
+                                <i class="bi bi-bell"></i>
+                                <span class="position-absolute top-0 start-0 translate-middle badge rounded-pill bg-danger"
+                                      style="font-size:.45rem; transform: translate(-25%,-35%) !important;">1</span>
+                            </a>
+                            <a href="#" aria-label="search"><i class="bi bi-search"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="mt-1">
+                        <div class="nav-pill">
+                            <ul class="nav-links">
+                                <li><a href="index.html">الرئيسية</a></li>
+                                <li><a href="villa.html">الفلل</a></li>
+                                <li><a href="offers.html">العروض</a></li>
+                                <li><a class="active" href="profile.html">حسابي</a></li>
+                                <li><a href="#">عن كي جو</a></li>
+                                <li><a href="#">التواصل</a></li>
+                            </ul>
+
+                            <a class="brand" href="index.html" aria-label="KeyGo">
+                                <svg width="143" height="41" viewBox="0 0 143 41" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_75_1216)">
+                                        <path
+                                            d="M10.1982 21.3963C10.1982 16.4227 8.58994 11.6717 5.54533 7.65817L5.07957 7.04301C1.91304 10.5712 0 15.1551 0 20.1645C0 25.7084 2.34129 30.7312 6.13299 34.3744L6.73629 33.4099C9.001 29.7906 10.1966 25.6367 10.1966 21.3963H10.1982Z"
+                                            fill="#4C0087" />
+                                        <path
+                                            d="M21.109 0C16.0435 0 11.3953 1.70513 7.7583 4.54652L8.54602 5.58424C10.9702 8.78248 12.6034 12.3854 13.3802 16.1973C15.1526 13.6844 18.1597 12.0285 21.5622 12.0285H23.4128V15.5657H21.5622C18.1659 15.5657 15.4027 18.2055 15.4027 21.45C15.4027 24.6946 18.1659 27.3344 21.5622 27.3344C24.4943 27.3344 26.9544 25.365 27.5702 22.7386H24.771V19.2014H34.7894V22.7386H31.3275C30.6679 27.3254 26.5402 30.8701 21.5607 30.8701C18.1425 30.8701 15.126 29.1993 13.3568 26.6685C12.7316 29.6801 11.5719 32.5767 9.91673 35.224L9.00397 36.6842C12.4315 38.9821 16.6061 40.3289 21.1105 40.3289C26.9388 40.3289 32.2153 38.0728 36.0367 34.4222C39.8565 30.773 42.2197 25.7323 42.2197 20.163C42.2165 9.02884 32.7654 0 21.109 0Z"
+                                            fill="#4C0087" />
+                                        <path
+                                            d="M32.0177 13.7918L29.9189 11.7869L27.8202 13.7918L29.9189 15.7968L32.0177 13.7918Z"
+                                            fill="#F56800" />
+                                        <path
+                                            d="M59.7841 16.4556L67.105 27.7211L61.5925 29.0082L55.6501 19.2641L53.9043 20.581L52.7399 28.8036L47.5947 28.9201L50.8722 6.3308L55.9252 6.21433L54.517 15.7523L65.0231 5.51108L70.0464 6.59358L59.7857 16.4541L59.7841 16.4556Z"
+                                            fill="#4C0087" />
+                                        <path
+                                            d="M83.7049 22.658L73.2598 23.3314C73.5051 24.7364 74.5164 25.6427 76.3231 25.6427C77.9767 25.6427 79.6006 25.0275 80.9791 24.063L82.4499 27.5748C80.5196 29.0082 78.1002 29.5352 75.4354 29.5352C71.1779 29.5352 68.4834 26.9312 68.4834 22.7177C68.4834 17.2171 72.3423 13.3544 77.6407 13.3544C81.8059 13.3544 84.0425 16.0166 84.0425 19.3821C84.0425 20.4347 83.9815 21.6352 83.7049 22.6595V22.658ZM77.2109 17.2738C75.526 17.2738 74.0569 18.2682 73.5661 20.0241L79.6616 19.6732C79.6616 18.1816 78.8645 17.2738 77.2109 17.2738Z"
+                                            fill="#4C0087" />
+                                        <path
+                                            d="M90.1052 35.3285L85.4492 34.5969L89.2472 28.5991L85.7868 14.0278L90.7789 13.4723L92.7701 22.8356L97.8543 13.326L103.031 13.6187L90.1052 35.33V35.3285Z"
+                                            fill="#4C0087" />
+                                        <path
+                                            d="M113.384 29.4173C107.227 29.4173 103.062 25.5546 103.062 19.2641C103.062 10.8669 108.728 5.01387 117.06 5.01387C120.245 5.01387 122.971 5.89182 125.023 7.94037L121.806 11.7732C120.428 10.5727 118.468 9.78287 116.477 9.78287C111.117 9.78287 108.329 14.1129 108.329 19.0581C108.329 22.1309 110.075 24.823 113.474 24.823C116.567 24.823 118.59 23.4478 119.631 20.4631L114.486 20.2287L115.466 15.927L125.665 16.2197C124.96 23.8853 121.316 29.4158 113.384 29.4158V29.4173Z"
+                                            fill="#4C0087" />
+                                        <path
+                                            d="M133.475 29.4471C129.218 29.4471 126.492 26.6087 126.492 22.5714C126.492 16.9528 130.628 12.799 136.109 12.799C140.459 12.799 143 15.6374 143 19.7628C143 25.4979 139.049 29.4486 133.474 29.4486L133.475 29.4471ZM135.496 17.2738C133.016 17.2738 131.331 19.5568 131.331 22.0144C131.331 23.7703 132.25 24.9992 134.027 24.9992C136.57 24.9992 138.131 23.0088 138.131 20.493C138.131 18.6206 137.244 17.2738 135.498 17.2738H135.496Z"
+                                            fill="#4C0087" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_75_1216">
+                                            <rect width="143" height="40.3289" rx="8" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </a>
+
+                            <button class="mobile-menu-trigger btn btn-sm btn-outline-secondary d-lg-none" type="button"
+                                    data-bs-toggle="offcanvas" data-bs-target="#menuCanvas">
+                                <i class="bi bi-list"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="nav-sticky-spacer" aria-hidden="true"></div>
+            </div>
+        </header>
+
+        <main>
+            <section class="profile-summary">
+                <div class="container">
+                    <div class="profile-summary-card">
+                        <div class="profile-identity">
+                            <div class="profile-avatar-wrap" aria-hidden="true">
+                                <div class="profile-avatar">
+                                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&amp;fit=crop&amp;w=400&amp;q=80"
+                                         alt="صورة الملف الشخصي" />
+                                </div>
+                            </div>
+
+                            <div class="profile-copy">
+                                <span class="profile-kicker">الملف الشخصي</span>
+                                <div class="profile-name">محمد عدنان</div>
+                                <div class="profile-subtitle">عضو منذ 2023 ويستخدم كي جو لإدارة الحجوزات والمفضلة والتنبيهات.</div>
+                            </div>
+                        </div>
+
+                        <div class="profile-stats">
+                            <div class="profile-stat">
+                                <strong>12</strong>
+                                <span>حجوزات سابقة</span>
+                            </div>
+                            <div class="profile-stat">
+                                <strong>8</strong>
+                                <span>فلل مفضلة</span>
+                            </div>
+                            <div class="profile-stat">
+                                <strong>4</strong>
+                                <span>طلبات نشطة</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="profile-main">
+                <div class="container">
+                    <div class="profile-grid">
+                        <div class="profile-main-stack">
+                            <div class="profile-panel">
+                                <h2 class="profile-panel-title">إدارة الحساب</h2>
+                                <div class="profile-info-list">
+                                    <div class="profile-info-item">
+                                        <div class="profile-info-copy">
+                                            <span class="profile-info-label">الاسم</span>
+                                            <span class="profile-info-value">محمد عدنان</span>
+                                        </div>
+                                        <button class="profile-edit-btn" type="button">تعديل</button>
+                                    </div>
+
+                                    <div class="profile-info-item">
+                                        <div class="profile-info-copy">
+                                            <span class="profile-info-label">البريد الإلكتروني</span>
+                                            <span class="profile-info-value">m.abushanab@example.com</span>
+                                        </div>
+                                        <button class="profile-edit-btn" type="button">تعديل</button>
+                                    </div>
+
+                                    <div class="profile-info-item">
+                                        <div class="profile-info-copy">
+                                            <span class="profile-info-label">رقم الجوال</span>
+                                            <span class="profile-info-value">0599 123 456</span>
+                                        </div>
+                                        <button class="profile-edit-btn" type="button">تعديل</button>
+                                    </div>
+
+                                    <div class="profile-info-item">
+                                        <div class="profile-info-copy">
+                                            <span class="profile-info-label">كلمة المرور</span>
+                                            <span class="profile-info-value">••••••••••</span>
+                                        </div>
+                                        <button class="profile-edit-btn" type="button">تعديل</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="profile-panel">
+                                <h2 class="profile-panel-title">الرصيد والمكافآت</h2>
+                                <div class="profile-balance-grid">
+                                    <div class="profile-balance-card">
+                                        <strong>420 ش</strong>
+                                        <span>الرصيد المتاح</span>
+                                    </div>
+                                    <div class="profile-balance-card">
+                                        <strong>1350</strong>
+                                        <span>نقاط المكافآت</span>
+                                    </div>
+                                    <div class="profile-balance-card">
+                                        <strong>3</strong>
+                                        <span>قسائم نشطة</span>
+                                    </div>
+                                </div>
+                                <div class="profile-balance-note">
+                                    استخدم رصيدك ونقاطك للحصول على خصومات إضافية عند إرسال طلبات الحجز القادمة.
+                                </div>
+                            </div>
+
+                            <div class="profile-panel">
+                                <div class="profile-favorites-head">
+                                    <h2 class="profile-panel-title mb-0">الفلل المفضلة</h2>
+                                    <div class="profile-favorites-controls">
+                                        <button class="profile-favorites-arrow" type="button" data-favorites-prev="favoritesRail"
+                                                aria-label="السابق">
+                                            <i class="bi bi-chevron-right"></i>
+                                        </button>
+                                        <button class="profile-favorites-arrow" type="button" data-favorites-next="favoritesRail"
+                                                aria-label="التالي">
+                                            <i class="bi bi-chevron-left"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="profile-favorites-rail" id="favoritesRail" data-favorites-rail aria-label="الفلل المفضلة">
+                                    <a class="profile-favorites-card text-decoration-none" href="villa-details.html">
+                                        <article class="listing-cardx">
+                                            <div class="listing-media">
+                                                <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&amp;fit=crop&amp;w=900&amp;q=80"
+                                                     alt="فيلا ضوء القمر" />
+                                            </div>
+
+                                            <div class="listing-meta">
+                                                <div class="feature-badges">
+                                                    <span class="f-badge" title="ميزة">
+                                                        <i class="bi bi-camera-video"></i>
+                                                        <b>3</b>
+                                                    </span>
+                                                    <span class="f-badge" title="ميزة">
+                                                        <i class="bi bi-person"></i>
+                                                        <b>2</b>
+                                                    </span>
+                                                </div>
+                                                <div class="rating">
+                                                    <span class="rating-label">التقييمات</span>
+                                                    <div class="stars">
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="listing-bottom">
+                                                <div class="info-right">
+                                                    <div class="title">فيلا ضوء القمر</div>
+                                                    <div class="sub">أريحا - حي العقبة</div>
+                                                </div>
+                                                <div class="info-left">
+                                                    <div class="price">550 ش</div>
+                                                    <div class="sub">إجمالي ليلة واحدة</div>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </a>
+
+                                    <a class="profile-favorites-card text-decoration-none" href="villa-details.html">
+                                        <article class="listing-cardx">
+                                            <div class="listing-media">
+                                                <img src="https://images.unsplash.com/photo-1502005097973-6a7082348e28?auto=format&amp;fit=crop&amp;w=900&amp;q=80"
+                                                     alt="فيلا النسيم" />
+                                            </div>
+
+                                            <div class="listing-meta">
+                                                <div class="feature-badges">
+                                                    <span class="f-badge" title="ميزة">
+                                                        <i class="bi bi-camera-video"></i>
+                                                        <b>4</b>
+                                                    </span>
+                                                    <span class="f-badge" title="ميزة">
+                                                        <i class="bi bi-person"></i>
+                                                        <b>3</b>
+                                                    </span>
+                                                </div>
+                                                <div class="rating">
+                                                    <span class="rating-label">التقييمات</span>
+                                                    <div class="stars">
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="listing-bottom">
+                                                <div class="info-right">
+                                                    <div class="title">فيلا النسيم</div>
+                                                    <div class="sub">أريحا - حي النخيل</div>
+                                                </div>
+                                                <div class="info-left">
+                                                    <div class="price">640 ش</div>
+                                                    <div class="sub">إجمالي ليلة واحدة</div>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </a>
+
+                                    <a class="profile-favorites-card text-decoration-none" href="villa-details.html">
+                                        <article class="listing-cardx">
+                                            <div class="listing-media">
+                                                <img src="https://images.unsplash.com/photo-1460317442991-0ec209397118?auto=format&amp;fit=crop&amp;w=900&amp;q=80"
+                                                     alt="فيلا السهول" />
+                                            </div>
+
+                                            <div class="listing-meta">
+                                                <div class="feature-badges">
+                                                    <span class="f-badge" title="ميزة">
+                                                        <i class="bi bi-camera-video"></i>
+                                                        <b>5</b>
+                                                    </span>
+                                                    <span class="f-badge" title="ميزة">
+                                                        <i class="bi bi-person"></i>
+                                                        <b>4</b>
+                                                    </span>
+                                                </div>
+                                                <div class="rating">
+                                                    <span class="rating-label">التقييمات</span>
+                                                    <div class="stars">
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="listing-bottom">
+                                                <div class="info-right">
+                                                    <div class="title">فيلا السهول</div>
+                                                    <div class="sub">أريحا - حي الربيع</div>
+                                                </div>
+                                                <div class="info-left">
+                                                    <div class="price">790 ش</div>
+                                                    <div class="sub">إجمالي ليلة واحدة</div>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </a>
+
+                                    <a class="profile-favorites-card text-decoration-none" href="villa-details.html">
+                                        <article class="listing-cardx">
+                                            <div class="listing-media">
+                                                <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&amp;fit=crop&amp;w=900&amp;q=80"
+                                                     alt="فيلا الوادي" />
+                                            </div>
+
+                                            <div class="listing-meta">
+                                                <div class="feature-badges">
+                                                    <span class="f-badge" title="ميزة">
+                                                        <i class="bi bi-camera-video"></i>
+                                                        <b>2</b>
+                                                    </span>
+                                                    <span class="f-badge" title="ميزة">
+                                                        <i class="bi bi-person"></i>
+                                                        <b>2</b>
+                                                    </span>
+                                                </div>
+                                                <div class="rating">
+                                                    <span class="rating-label">التقييمات</span>
+                                                    <div class="stars">
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="listing-bottom">
+                                                <div class="info-right">
+                                                    <div class="title">فيلا الوادي</div>
+                                                    <div class="sub">أريحا - حي البساتين</div>
+                                                </div>
+                                                <div class="info-left">
+                                                    <div class="price">520 ش</div>
+                                                    <div class="sub">إجمالي ليلة واحدة</div>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </a>
+
+                                    <a class="profile-favorites-card text-decoration-none" href="villa-details.html">
+                                        <article class="listing-cardx">
+                                            <div class="listing-media">
+                                                <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&amp;fit=crop&amp;w=900&amp;q=80"
+                                                     alt="فيلا الروابي" />
+                                            </div>
+
+                                            <div class="listing-meta">
+                                                <div class="feature-badges">
+                                                    <span class="f-badge" title="ميزة">
+                                                        <i class="bi bi-camera-video"></i>
+                                                        <b>3</b>
+                                                    </span>
+                                                    <span class="f-badge" title="ميزة">
+                                                        <i class="bi bi-person"></i>
+                                                        <b>3</b>
+                                                    </span>
+                                                </div>
+                                                <div class="rating">
+                                                    <span class="rating-label">التقييمات</span>
+                                                    <div class="stars">
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="listing-bottom">
+                                                <div class="info-right">
+                                                    <div class="title">فيلا الروابي</div>
+                                                    <div class="sub">النصارية - حي المرج</div>
+                                                </div>
+                                                <div class="info-left">
+                                                    <div class="price">610 ش</div>
+                                                    <div class="sub">إجمالي ليلة واحدة</div>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </a>
+
+                                    <a class="profile-favorites-card text-decoration-none" href="villa-details.html">
+                                        <article class="listing-cardx">
+                                            <div class="listing-media">
+                                                <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&amp;fit=crop&amp;w=900&amp;q=80"
+                                                     alt="شاليه النخبة" />
+                                            </div>
+
+                                            <div class="listing-meta">
+                                                <div class="feature-badges">
+                                                    <span class="f-badge" title="ميزة">
+                                                        <i class="bi bi-camera-video"></i>
+                                                        <b>2</b>
+                                                    </span>
+                                                    <span class="f-badge" title="ميزة">
+                                                        <i class="bi bi-person"></i>
+                                                        <b>2</b>
+                                                    </span>
+                                                </div>
+                                                <div class="rating">
+                                                    <span class="rating-label">التقييمات</span>
+                                                    <div class="stars">
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="listing-bottom">
+                                                <div class="info-right">
+                                                    <div class="title">شاليه النخبة</div>
+                                                    <div class="sub">أريحا - حي الهدوء</div>
+                                                </div>
+                                                <div class="info-left">
+                                                    <div class="price">470 ش</div>
+                                                    <div class="sub">إجمالي ليلة واحدة</div>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="profile-side-stack">
+                            <div class="profile-side-card">
+                                <h3>ملخص سريع</h3>
+                                <p>معلومات سريعة عن نشاطك على كي جو لتبقى على اطلاع دائم بحسابك وحجوزاتك الحالية.</p>
+
+                                <div class="profile-side-list">
+                                    <div class="profile-side-item">
+                                        <span>آخر تسجيل دخول</span>
+                                        <strong>اليوم</strong>
+                                    </div>
+                                    <div class="profile-side-item">
+                                        <span>وسيلة التواصل</span>
+                                        <strong>واتساب</strong>
+                                    </div>
+                                    <div class="profile-side-item">
+                                        <span>الحالة</span>
+                                        <strong>نشط</strong>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="profile-booking-card">
+                                <h3>الحجوزات الحالية</h3>
+                                <div class="profile-booking-item">
+                                    <div class="profile-booking-title">فيلا ضوء القمر</div>
+                                    <div class="profile-booking-location">
+                                        <i class="bi bi-geo-alt-fill"></i>
+                                        أريحا - حي العقبة
+                                    </div>
+
+                                    <div class="profile-booking-dates">
+                                        <div class="profile-booking-date-row">
+                                            <span>تسجيل الوصول</span>
+                                            <strong>السبت 15/3/2026</strong>
+                                        </div>
+                                        <div class="profile-booking-date-row">
+                                            <span>تسجيل المغادرة</span>
+                                            <strong>الثلاثاء 18/3/2026</strong>
+                                        </div>
+                                    </div>
+
+                                    <div class="profile-booking-status">الحجز مؤكد</div>
+                                    <button class="profile-booking-extend" type="button">تمديد الحجز</button>
+                                </div>
+                            </div>
+
+                            <div class="profile-booking-card">
+                                <h3>الحجوزات السابقة</h3>
+                                <div class="profile-booking-item is-past">
+                                    <div class="profile-booking-title">فيلا النسيم</div>
+                                    <div class="profile-booking-location">
+                                        <i class="bi bi-geo-alt-fill"></i>
+                                        أريحا - حي النخيل
+                                    </div>
+
+                                    <div class="profile-booking-dates">
+                                        <div class="profile-booking-date-row">
+                                            <span>تسجيل الوصول</span>
+                                            <strong>الجمعة 7/2/2026</strong>
+                                        </div>
+                                        <div class="profile-booking-date-row">
+                                            <span>تسجيل المغادرة</span>
+                                            <strong>الأحد 9/2/2026</strong>
+                                        </div>
+                                    </div>
+
+                                    <div class="profile-booking-status is-past">مكتمل</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+                        <footer class="footer-lab">
+            <div class="container footer-lab-wrap">
+                <div class="row align-items-center g-4">
+                   
+                    <div class="col-12 col-lg-7">
+                        <div class="footer-lab-search">
+                             <button type="button" aria-label="بحث">
+                                <i class="bi bi-search"></i>
+                            </button>
+                            <input type="text" placeholder="ابحث بحسب المدينة أو الفلل" />
+                           
+                        </div>
+                    </div>
+                     <div class="col-12 col-lg-5 text-end">
+                        <a class="brand footer-lab-logo d-inline-flex" href="#" style="color:#fff;" aria-label="KeyGo">
+                            <svg width="188" height="54" viewBox="0 0 188 54" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_50_505)">
+                            <path
+                                d="M13.4074 28.1293C13.4074 21.5907 11.2931 15.3445 7.29036 10.068L6.67803 9.25928C2.51505 13.8978 0 19.9241 0 26.5099C0 33.7984 3.07806 40.4018 8.06296 45.1915L8.8561 43.9234C11.8335 39.1651 13.4054 33.7042 13.4054 28.1293H13.4074Z"
+                                fill="white" />
+                            <path
+                                d="M27.7519 0C21.0923 0 14.9814 2.24171 10.2 5.97725L11.2356 7.34151C14.4225 11.5462 16.5698 16.2828 17.591 21.2943C19.9211 17.9906 23.8745 15.8137 28.3478 15.8137H30.7806V20.464H28.3478C23.8827 20.464 20.2499 23.9345 20.2499 28.2C20.2499 32.4656 23.8827 35.9361 28.3478 35.9361C32.2025 35.9361 35.4368 33.347 36.2463 29.8941H32.5662V25.2438H45.7374V29.8941H41.186C40.3189 35.9243 34.8922 40.5844 28.3457 40.5844C23.8519 40.5844 19.8862 38.3879 17.5602 35.0606C16.7383 39.0199 15.2136 42.8281 13.0376 46.3084L11.8376 48.2282C16.3437 51.2492 21.8321 53.0198 27.7539 53.0198C35.4162 53.0198 42.3531 50.0538 47.3771 45.2543C52.399 40.4568 55.5058 33.8298 55.5058 26.508C55.5017 11.8701 43.0764 0 27.7519 0Z"
+                                fill="white" />
+                            <path d="M42.0929 18.132L39.3337 15.4961L36.5746 18.132L39.3337 20.7678L42.0929 18.132Z"
+                                  fill="#F56800" />
+                            <path
+                                d="M78.5973 21.6337L88.2218 36.4443L80.9746 38.1364L73.1624 25.326L70.8672 27.0574L69.3364 37.8675L62.572 38.0206L66.8809 8.32279L73.524 8.16968L71.6726 20.7091L85.4849 7.24512L92.0889 8.66827L78.5993 21.6317L78.5973 21.6337Z"
+                                fill="white" />
+                            <path
+                                d="M110.046 29.7879L96.3136 30.6732C96.6362 32.5204 97.9656 33.7119 100.341 33.7119C102.515 33.7119 104.65 32.9031 106.462 31.6351L108.396 36.252C105.858 38.1364 102.677 38.8294 99.1738 38.8294C93.5766 38.8294 90.0342 35.4059 90.0342 29.8664C90.0342 22.6348 95.1074 17.5566 102.073 17.5566C107.549 17.5566 110.49 21.0566 110.49 25.4812C110.49 26.865 110.409 28.4433 110.046 29.7899V29.7879ZM101.508 22.7094C99.293 22.7094 97.3615 24.0168 96.7163 26.3252L104.73 25.8639C104.73 23.9029 103.682 22.7094 101.508 22.7094Z"
+                                fill="white" />
+                            <path
+                                d="M118.46 46.4459L112.339 45.484L117.332 37.5988L112.783 18.4421L119.346 17.7119L121.963 30.0217L128.648 17.5195L135.453 17.9043L118.46 46.4478V46.4459Z"
+                                fill="white" />
+                            <path
+                                d="M149.064 38.6744C140.97 38.6744 135.494 33.5961 135.494 25.3261C135.494 14.2864 142.943 6.59155 153.897 6.59155C158.084 6.59155 161.668 7.74578 164.366 10.439L160.137 15.4779C158.325 13.8997 155.748 12.8613 153.13 12.8613C146.084 12.8613 142.419 18.5539 142.419 25.0553C142.419 29.0951 144.714 32.6343 149.183 32.6343C153.25 32.6343 155.908 30.8264 157.277 26.9024L150.513 26.5942L151.801 20.9389L165.21 21.3236C164.284 31.4015 159.492 38.6724 149.064 38.6724V38.6744Z"
+                                fill="white" />
+                            <path
+                                d="M175.478 38.7135C169.881 38.7135 166.297 34.9819 166.297 29.6741C166.297 22.2874 171.734 16.8264 178.94 16.8264C184.659 16.8264 188 20.558 188 25.9817C188 33.5215 182.805 38.7155 175.476 38.7155L175.478 38.7135ZM178.135 22.7094C174.874 22.7094 172.659 25.7108 172.659 28.9419C172.659 31.2503 173.867 32.8659 176.203 32.8659C179.547 32.8659 181.599 30.2492 181.599 26.9416C181.599 24.48 180.432 22.7094 178.137 22.7094H178.135Z"
+                                fill="white" />
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_50_505">
+                                <rect width="188" height="53.0198" rx="8" fill="white" />
+                            </clipPath>
+                            </defs>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="row align-items-center g-4 mt-1">
+                   
+
+                    <div class="col-12 col-lg-6">
+                        <div class="footer-lab-right">
+                           
+                            <div class="footer-lab-social">
+                                <a href="#" aria-label="facebook"><i class="bi bi-facebook"></i></a>
+                                <a href="#" aria-label="linkedin"><i class="bi bi-linkedin"></i></a>
+                                <a href="#" aria-label="youtube"><i class="bi bi-youtube"></i></a>
+                                <a href="#" aria-label="instagram"><i class="bi bi-instagram"></i></a>
+                            </div>
+                             <div class="footer-lab-stores">
+                                <a href="#" class="store-pill" aria-label="App Store">
+                                    <i class="bi bi-apple"></i>
+                                    <span>App Store</span>
+                                </a>
+                                <a href="#" class="store-pill" aria-label="Google Play">
+                                    <i class="bi bi-google-play"></i>
+                                    <span>Google Play</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="col-12 col-lg-6">
+                        <nav class="footer-lab-links" aria-label="روابط التذييل">
+                            <a href="index.html">الرئيسية</a>
+                            <a href="villa.html">الفلل</a>
+                            <a href="offers.html">العروض</a>
+                            <a href="#">عن كي جو</a>
+                            <a href="#">تواصل معنا</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-lab-copy">جميع الحقوق محفوظة © كي جو</div>
+        </footer>
+
+
+
+        <nav class="mobile-bottom-nav" aria-label="التنقل السفلي">
+            <ul class="nav-list">
+                <li>
+                    <a class="nav-link" href="index.html">
+                        <i class="bi bi-house-door-fill"></i>
+                        <span>الرئيسية</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-link" href="villa.html">
+                        <i class="bi bi-buildings"></i>
+                        <span>الفلل</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-link" href="offers.html">
+                        <i class="bi bi-percent"></i>
+                        <span>العروض</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-link is-active" href="profile.html" aria-current="page">
+                        <i class="bi bi-person-circle"></i>
+                        <span>حسابي</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="menuCanvas">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title fw-bolder">القائمة</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+                <div class="d-grid gap-2">
+                    <a class="btn btn-outline-primary" href="index.html">الرئيسية</a>
+                    <a class="btn btn-outline-primary" href="villa.html">الفلل</a>
+                    <a class="btn btn-outline-primary" href="offers.html">العروض</a>
+                    <a class="btn btn-outline-primary" href="profile.html">حسابي</a>
+                    <a class="btn btn-outline-primary" href="#">عن كي جو</a>
+                    <a class="btn btn-outline-primary" href="#">التواصل</a>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/lang-switcher.js?v=1"></script>
+        <script src="assets/js/profile-favorites-slider.js?v=2"></script>
+    </body>
+
+</html>

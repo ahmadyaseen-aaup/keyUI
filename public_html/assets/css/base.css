@@ -1,0 +1,105 @@
+/* =========================================================
+DESIGN SYSTEM (from your screenshot)
+- Grid: 12 cols, centered, gutter 24px
+- Corner radius: 8px–12px
+- Soft shadow: Y=4px, Blur=20px, Opacity 5–10% (black)
+- Desktop target width: 1440px
+- Max content width: 1200px–1440px  -> set to 1320px (Bootstrap-like)
+- Spacing system: 8px base (XS=8, S=16, M=24, L=32, XL=48, Section=80–120)
+========================================================== */
+
+:root {
+    /* 1440 desktop target */
+    --desktop: 1440px;
+
+    /* Content width (within 1200–1440) */
+    --container-max: 1320px;
+
+    /* Grid gutter */
+    --gutter: 24px;
+
+    /* Radius + shadow */
+    --radius: 8px;
+    --shadow-soft: 0 4px 20px rgba(0, 0, 0, .08);
+    /* 5–10% */
+
+    /* 8px spacing system */
+    --sp-xxs: 4px;
+    --sp-xs: 8px;
+    --sp-s: 16px;
+    --sp-m: 24px;
+    --sp-l: 32px;
+    --sp-xl: 48px;
+    --sp-section: 36px;
+    /* 80–120 */
+
+    /* Theme */
+    --bg: #f6f7fb;
+    --p700: #3a0f78;
+    --p800: #240b45;
+    --p900: #16082f;
+    --primary: #4C0087;
+    --primary-dark: #200039;
+    --orange: #f07a2b;
+    --orange2: #ff6b4a;
+    --orange-light: #fabbc4;
+    --red: #E84B62;
+    --red-light: #eb7587;
+    --white: #ffffff;
+}
+
+body {
+    background: var(--bg);
+    font-family: "Readex Pro", system-ui, -apple-system, "Segoe UI", Tahoma, Arial, sans-serif;
+    color: #111;
+    overflow-x: hidden;
+}
+
+html[dir="ltr"] body {
+    text-align: left;
+}
+
+.mobile-bottom-nav {
+    display: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Force Bootstrap container width to match 1440 design */
+.container {
+    max-width: var(--container-max);
+}
+
+/* Force gutters to 24px everywhere */
+.row {
+    --bs-gutter-x: var(--gutter);
+    --bs-gutter-y: var(--gutter);
+}
+
+html[dir="ltr"] .nav-pill {
+    flex-direction: row-reverse;
+}
+
+html[dir="ltr"] .nav-links {
+    direction: ltr;
+}
+
+@media (max-width: 992px) {
+    :root {
+        --sp-section: 56px;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --sp-section: 40px;
+    }
+}
+
+@media (max-width: 576px) {
+    :root {
+        --sp-section: 32px;
+    }
+}
